@@ -23,7 +23,7 @@ Emoji所有有序的表情极其编码
     
     
 
-打印出来表情编码：
+  打印出来表情编码：
 NSString *hexstr = @"";  
   
     for (int i=0;i< [text length];i++)  
