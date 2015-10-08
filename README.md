@@ -1,21 +1,21 @@
 # Emoji
 Emoji所有有序的表情极其编码 
 
--(void)setupKeyboardView{
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, kScreenHeight - 300, 300, 300)];
+    -(void)setupKeyboardView{
+      UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, kScreenHeight - 300, 300, 300)];
     
-    NSArray *emojiArray = [Emoji allEmoji];
-    for (NSInteger i = 0; i < emojiArray.count; i ++) {
-        UIButton *button =[[UIButton alloc]init];
-        button.frame = CGRectMake(i%8 * (kScreenwidth/8.0), i/8 * (kScreenwidth/8), kScreenwidth/8, kScreenwidth/8);
-        [button setTitle:emojiArray[i] forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(println:) forControlEvents:UIControlEventTouchUpInside];
-        [view addSubview:button];
-    }
-    view.backgroundColor =[UIColor redColor];
-    [self.view addSubview:view];
+       NSArray *emojiArray = [Emoji allEmoji];
+       for (NSInteger i = 0; i < emojiArray.count; i ++) {
+          UIButton *button =[[UIButton alloc]init];
+          button.frame = CGRectMake(i%8 * (kScreenwidth/8.0), i/8 * (kScreenwidth/8), kScreenwidth/8, kScreenwidth/8);
+          [button setTitle:emojiArray[i] forState:UIControlStateNormal];
+          [button addTarget:self action:@selector(println:) forControlEvents:UIControlEventTouchUpInside];
+          [view addSubview:button];
+      }
+      view.backgroundColor =[UIColor redColor];
+       [self.view addSubview:view];
     
-}
+   }
   
   
   
